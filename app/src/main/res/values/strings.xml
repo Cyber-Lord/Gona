@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Gona</string>
+    <string name="intro_first_line">Fresh, Edible, Tasty</string>
+    <string name="intro_second_line">Something Random</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_signUp">REGISTER</string>
+    <string name="about_us">About</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+</resources>

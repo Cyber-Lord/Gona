@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screenbg"
+    android:layout_margin="5sp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="270dp"
+            android:layout_height="250dp"
+            android:src="@drawable/gona"
+            android:layout_marginTop="40sp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_first_line"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="true"
+            android:layout_marginTop="20sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_second_line"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="10sp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_login"
+            android:layout_marginTop="30sp"
+            android:text="@string/btn_login"
+            android:textSize="25sp"
+            android:textColor="@color/bgStart"
+            android:id="@+id/btnUserLogin"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:background="@drawable/btn_register"
+            android:text="@string/btn_signUp"
+            android:textSize="25sp"
+            android:id="@+id/btnUserSignUp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
+            android:text="@string/about_us"
+            android:textAlignment="center"
+            android:textSize="20sp"
+
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
