@@ -12,8 +12,8 @@
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:orientation="vertical"
-
         >
+
 
         <ImageView
             android:layout_width="270dp"
@@ -21,48 +21,101 @@
             android:layout_gravity="center"
             android:layout_marginTop="20sp"
             android:src="@drawable/gona" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/userFirstNameWrapper"
+                android:layout_marginTop="5dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:hint="@string/first_name"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:id="@+id/userFirstName"
+                    />
 
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/userLastNameWrapper">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:hint="@string/last_name"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:id="@+id/userLastName"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:hint="@string/first_name"
+            android:hint="@string/other_name"
             android:textSize="20sp"
-
+            android:inputType="text"
+            android:id="@+id/otherNames"
             />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:hint="@string/last_name"
-            android:textSize="20sp"
-
-            />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
             android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
             android:textSize="20sp" />
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textSize="20sp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:hint="@string/confirm_password"
-            android:textSize="20sp"
-            />
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/userPasswordWrapper"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textSize="20sp"
+                    android:id="@+id/userPassword"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:id="@+id/userConfirmPasswordWrapper"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userConfirmPassword"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:textSize="20sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,7 +124,6 @@
             android:text="@string/register"
             android:textColor="@color/colorWhite"
             android:textSize="20sp"
-
             />
     </LinearLayout>
 
