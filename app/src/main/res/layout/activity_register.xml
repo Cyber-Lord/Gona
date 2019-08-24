@@ -71,7 +71,7 @@
                 android:hint="@string/other_name"
                 android:textSize="20sp"
                 android:inputType="text"
-                android:id="@+id/otherNames"
+                android:id="@+id/userOtherNames"
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -84,6 +84,7 @@
                 android:layout_marginTop="10sp"
                 android:hint="@string/email_address"
                 android:inputType="textEmailAddress"
+                android:id="@+id/userEmail"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
         <LinearLayout
