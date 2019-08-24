@@ -131,6 +131,7 @@
             android:text="@string/register"
             android:textColor="@color/colorWhite"
             android:textSize="20sp"
+            android:id="@+id/btnRegister"
             />
     </LinearLayout>
 
