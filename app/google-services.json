@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "91361958244",
+    "firebase_url": "https://gona-f4b10.firebaseio.com",
+    "project_id": "gona-f4b10",
+    "storage_bucket": "gona-f4b10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91361958244:android:5489c9f4afb7296d",
+        "android_client_info": {
+          "package_name": "com.example.gona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91361958244-313fegv1b6rdkp34lk2qkkpd3m7b7e6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi6WfyGaKv2fV12_869qYc0RBDsLh38P8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91361958244-313fegv1b6rdkp34lk2qkkpd3m7b7e6d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
