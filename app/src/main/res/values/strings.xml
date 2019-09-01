@@ -16,4 +16,6 @@
     <string name="phone_number">Phone Number</string>
     <string name="register">Register</string>
     <string name="other_name">Other Names</string>
+    <string name="popular_products">Popular Products</string>
+    <string name="browse_category">Browse Category</string>
 </resources>

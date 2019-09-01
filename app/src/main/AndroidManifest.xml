@@ -13,7 +13,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".GonaActivity"></activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LogInActivity" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".LogInActivity"
+            android:exported="true"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
