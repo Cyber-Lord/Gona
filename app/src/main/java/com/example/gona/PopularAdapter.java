@@ -1,3 +1,5 @@
+/*
+
 package com.example.gona;
 
 import android.content.Context;
@@ -26,7 +28,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ImageVie
     @NonNull
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v= LayoutInflater.from(mContext).inflate(R.layout.popular_item, viewGroup, false);
+        View v= LayoutInflater.from(mContext).inflate(R.layout.item_layout, viewGroup, false);
         return new ImageViewHolder(v);
     }
 
@@ -35,12 +37,18 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ImageVie
     Popular popularCur = mPopulars.get(i);
     imageViewHolder.prod_name.setText(popularCur.getProduct_title());
     imageViewHolder.prod_price.setText(popularCur.getProduct_price());
-        Picasso.get()
+        Picasso.with(mContext)
                 .load(popularCur.getProduct_image())
                 .placeholder(R.drawable.image_placeholder)
                 .fit()
                 .centerCrop()
                 .into((Target) imageViewHolder.prod_image);
+
+                //.load(popularCur.getProduct_image())
+                //.placeholder(R.drawable.image_placeholder)
+               // .fit()
+                //.centerCrop()
+                //.into((Target) imageViewHolder.prod_image);
                 //.load(R.drawable.image_placeholder).into(imageViewHolder.prod_image);
 
     }
@@ -52,7 +60,9 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ImageVie
 
     public class ImageViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView prod_name, prod_price, prod_image;
+        public TextView prod_name;
+        public  TextView prod_price;
+        public TextView prod_image;
 
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,3 +74,5 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ImageVie
         }
     }
 }
+
+*/

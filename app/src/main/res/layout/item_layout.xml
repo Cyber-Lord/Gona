@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp">
+
+    <ImageView
+        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:id="@+id/img"
+        android:layout_alignParentStart="true"
+        android:padding="4dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/image_placeholder"
+         />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:text="Fruit name"
+        android:layout_toRightOf="@id/img"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/f_name"
+        />
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:text="N200"
+        android:layout_toRightOf="@id/f_name"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/price"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/f_name"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        >
+
+    </View>
+
+</RelativeLayout>

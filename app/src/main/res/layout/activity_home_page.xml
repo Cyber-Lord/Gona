@@ -6,54 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".HomePage">
+
     <ViewFlipper
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:id="@+id/imgBanner"
+        android:layout_marginBottom="10dp"
         >
     </ViewFlipper>
-    <ScrollView
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        android:scrollbars="vertical"
         >
-    </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/popular_products"
-                    android:textSize="24sp"
-                    android:textColor="@color/colorPrimary"
-                    />
 
-            </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal"
-            >
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/recycler_view"
+    </androidx.recyclerview.widget.RecyclerView>
 
-                >
 
-            </androidx.recyclerview.widget.RecyclerView>
-        </LinearLayout>
-
-    </LinearLayout>
 
 </LinearLayout>

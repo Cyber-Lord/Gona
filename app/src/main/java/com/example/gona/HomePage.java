@@ -1,3 +1,4 @@
+
 package com.example.gona;
 
 import androidx.annotation.NonNull;
@@ -20,17 +21,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage extends AppCompatActivity {
+    RecyclerView recyclerView;
+    RecyclerView.Adapter adapter;
+    RecyclerView.LayoutManager layoutManager;
+
+    String [] f_name, price;
+    int [] Img_res  = {
+            R.drawable.banana, R.drawable.mango, R.drawable.pineapple, R.drawable.orange, R.drawable.image_placeholder
+    };
+    ArrayList<DataProvider> arrayList = new ArrayList<>();
+
     ViewFlipper imgBanner;
 
-    private RecyclerView mRecyclerView;
+    /*private RecyclerView mRecyclerView;
     private PopularAdapter mAdapter;
 
     private DatabaseReference mDatabaseRef;
-    private List<Popular> mPopulars;
+    private List<Popular> mPopulars;*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        recyclerView = findViewById(R.id.recycler_view);
+
+        f_name = getResources().getStringArray(R.array.fruits);
+        price = getResources().getStringArray(R.array.prices);
+
+        int i = 0;
+        for(String name : f_name){
+            DataProvider dataProvider = new DataProvider(Img_res[i], name, price[i]);
+            arrayList.add(dataProvider);
+            i++;
+        }
+        adapter = new RecyclerAdapter(arrayList);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+
 
         imgBanner=findViewById(R.id.imgBanner);
 
@@ -43,7 +73,6 @@ public class HomePage extends AppCompatActivity {
         for (int slide:slider){
             bannerFlipper(slide);
         }
-        showPopularProducts();
     }
     public void bannerFlipper(int image){
         ImageView imageView = new ImageView(this);
@@ -55,29 +84,5 @@ public class HomePage extends AppCompatActivity {
         imgBanner.setOutAnimation(this, R.anim.fade_out);
 
     }
-    public void showPopularProducts(){
-        mRecyclerView=findViewById(R.id.recycler_view);
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        mPopulars = new ArrayList<>();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("popular");
-        mDatabaseRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot postSnapshot:dataSnapshot.getChildren()){
-                    Popular popular = postSnapshot.getValue(Popular.class);
-                    mPopulars.add(popular);
-                }
-                mAdapter=new PopularAdapter(HomePage.this, mPopulars);
-                mRecyclerView.setAdapter(mAdapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(HomePage.this, databaseError.getMessage(), Toast.LENGTH_LONG).show();
-
-            }
-        });
-    }
 }
+

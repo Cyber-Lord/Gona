@@ -18,4 +18,20 @@
     <string name="other_name">Other Names</string>
     <string name="popular_products">Popular Products</string>
     <string name="browse_category">Browse Category</string>
+    <string name="check">Check Details</string>
+    <string-array name="fruits">
+        <item>"Orange"</item>
+        <item>"Pineapple"</item>
+        <item>"Banana"</item>
+        <item>"Mango"</item>
+        <item>"Image"</item>
+    </string-array>
+    <string-array name="prices">
+        <item>"N130"</item>
+        <item>"N150"</item>
+        <item>"N200"</item>
+        <item>"N30"</item>
+        <item>"N50"</item>
+
+    </string-array>
 </resources>
