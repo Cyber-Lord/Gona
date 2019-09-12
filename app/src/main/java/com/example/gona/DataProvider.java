@@ -8,8 +8,12 @@ public class DataProvider {
         this.setF_name(f_name);
         this.setPrice(price);
     }
+
+
     private int img_res;
-    private String f_name, price;
+    private String f_name;
+    private String price;
+
 
     public int getImg_res() {
         return img_res;

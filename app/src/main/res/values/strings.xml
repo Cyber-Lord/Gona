@@ -24,14 +24,25 @@
         <item>"Pineapple"</item>
         <item>"Banana"</item>
         <item>"Mango"</item>
-        <item>"Image"</item>
+        <item>"Tomato"</item>
+        <item>"Pepper"</item>
     </string-array>
     <string-array name="prices">
         <item>"N130"</item>
         <item>"N150"</item>
         <item>"N200"</item>
         <item>"N30"</item>
-        <item>"N50"</item>
+        <item>"N270"</item>
+        <item>"180"</item>
+
+    </string-array>
+    <string-array name="numbers">
+        <item>"08130000000"</item>
+        <item>"09030000000"</item>
+        <item>"08030000000"</item>
+        <item>"07039000000"</item>
+        <item>"07030060000"</item>
+        <item>"07030010000"</item>
 
     </string-array>
 </resources>

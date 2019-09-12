@@ -25,9 +25,9 @@ public class HomePage extends AppCompatActivity {
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
 
-    String [] f_name, price;
+    String [] f_name, price, number;
     int [] Img_res  = {
-            R.drawable.banana, R.drawable.mango, R.drawable.pineapple, R.drawable.orange, R.drawable.image_placeholder
+            R.drawable.orange, R.drawable.pineapple, R.drawable.banana, R.drawable.mango, R.drawable.tomato, R.drawable.pepper
     };
     ArrayList<DataProvider> arrayList = new ArrayList<>();
 
@@ -47,6 +47,8 @@ public class HomePage extends AppCompatActivity {
 
         f_name = getResources().getStringArray(R.array.fruits);
         price = getResources().getStringArray(R.array.prices);
+        //number = getResources().getStringArray(R.array.numbers);
+
 
         int i = 0;
         for(String name : f_name){
@@ -65,9 +67,9 @@ public class HomePage extends AppCompatActivity {
         imgBanner=findViewById(R.id.imgBanner);
 
         int slider[] = {
-                R.drawable.pineapple,
+                R.drawable.tomato,
                 R.drawable.mango,
-                R.drawable.orange,
+                R.drawable.pepper,
                 R.drawable.banana
         };
         for (int slide:slider){
